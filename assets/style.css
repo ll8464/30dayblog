@@ -1,1 +1,25 @@
-/*# sourceMappingURL=style.css.map */
+/* SCSS Light Theme RGB */
+/* SCSS Dark Theme RGB */
+/*Variables*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 1.6rem;
+  color: rgb(251, 232, 166);
+  letter-spacing: 1px;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+header {
+  background-color: rgb(251, 232, 166);
+}
+
+html {
+  font-size: 62.5%;
+}/*# sourceMappingURL=style.css.map */

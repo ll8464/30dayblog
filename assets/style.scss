@@ -1,2 +1,68 @@
-$primaryBtn: rgb(40, 118, 121);
-$textColor: rgb(192, 67, 171);
+/* SCSS Light Theme RGB */
+$medium-champagne: rgba(251, 232, 166, 1);
+$atomic-tangerine: rgba(244, 151, 108, 1);
+$cadet: rgba(92, 107, 115, 1);
+$mauve: rgba(228, 193, 249, 1);
+$uranian-blue: rgba(169, 222, 249, 1);
+
+/* SCSS Dark Theme RGB */
+$outer-space-crayola: rgba(46, 53, 50, 1);
+$xanadu: rgba(126, 145, 129, 1);
+$light-periwinkle: rgba(199, 206, 219, 1);
+$cadet-grey: rgba(160, 170, 178, 1);
+$mountbatten-pink: rgba(148, 132, 155, 1);
+
+$textColor: black;
+
+/*Variables*/
+$light: #fff;
+$light-alt: $light-periwinkle;
+$primary-background: $medium-champagne;
+$secondary-background: $atomic-tangerine;
+$hover-light: $light;
+$hover-dark: $primary-background;
+$gradient-color: linear-gradient(
+  90deg,
+  #fbe8a6ff,
+  #f4976cff,
+  #5c6b73ff,
+  #e4c1f9ff,
+  #a9def9ff
+);
+$transparent-light: rbga(255, 255, 255, 0.05);
+$transparent-dark: rbga(0, 0, 0, 0.75);
+$font-family: "Poppins", sans-serif;
+$font-xsm: 1.2rem;
+$font-sm: 1.6rem;
+$font-md: 2.4rem;
+$font-lg: 3rem;
+$font-xl: 4rem;
+$gap: 2rem;
+$margin-sm: 2rem;
+$margin-md: 3rem;
+$item-min-height-sm: 20rem;
+$item-min-height-md: 30rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  color: $textColor;
+  font-size: $font-sm;
+  color: $primary-background;
+  letter-spacing: 1px;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+header {
+  background-color: $medium-champagne;
+}
+
+// Sets the scalable font size for rem (equilivent to 10px), even when using zoom.
+html {
+  font-size: 62.5%;
+}
