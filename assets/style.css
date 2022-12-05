@@ -46,4 +46,103 @@ button {
 
 i {
   font-size: 2.4rem;
+}
+
+/* Reusable classes */
+.container {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.place-items-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section:not(.featured-articles) {
+  padding-block: 5rem;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.screen-sm-hidden {
+  display: none;
+}
+
+/* Header */
+.header {
+  background-color: rgb(244, 151, 108);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+}
+
+.logo {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.menu {
+  position: absolute;
+  top: 8.5rem;
+  right: 1.5rem;
+  width: 23rem;
+  padding: 1.5rem;
+  background-color: rgb(244, 151, 108);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.25s ease-in;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu > .list {
+  flex-direction: column;
+}
+
+.list-link.current {
+  color: #fff;
+}
+
+.close-menu-icon {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.list-link:hover,
+.btn:hover,
+.btn:hover span {
+  color: #fff;
+}
+
+.moon-icon {
+  display: none;
+}
+
+.light-theme .sun-icon {
+  display: none;
+}
+
+.light-theme .moon-icon {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

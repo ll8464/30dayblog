@@ -15,12 +15,12 @@ $mountbatten-pink: rgba(148, 132, 155, 1);
 $textColor: black;
 
 /*Variables*/
-$light: #fff;
+$light-color: #fff;
 $light-alt: $light-periwinkle;
-$primary-background: $medium-champagne;
-$secondary-background: $atomic-tangerine;
-$hover-light: $light;
-$hover-dark: $primary-background;
+$primary-background-color: $medium-champagne;
+$secondary-background-color: $atomic-tangerine;
+$hover-light: $light-color;
+$hover-dark: $primary-background-color;
 $gradient-color: linear-gradient(
   90deg,
   #fbe8a6ff,
@@ -32,11 +32,11 @@ $gradient-color: linear-gradient(
 $transparent-light: rbga(255, 255, 255, 0.05);
 $transparent-dark: rbga(0, 0, 0, 0.75);
 $font-family: "Poppins", sans-serif;
-$font-xsm: 1.2rem;
-$font-sm: 1.6rem;
-$font-md: 2.4rem;
-$font-lg: 3rem;
-$font-xl: 4rem;
+$font-size-xsm: 1.2rem;
+$font-size-sm: 1.6rem;
+$font-size-md: 2.4rem;
+$font-size-lg: 3rem;
+$font-size-xl: 4rem;
 $gap: 2rem;
 $margin-sm: 2rem;
 $margin-md: 3rem;
@@ -52,7 +52,7 @@ $item-min-height-md: 30rem;
 body {
   font-family: $font-family;
   color: $textColor;
-  font-size: $font-sm;
+  font-size: $font-size-sm;
   letter-spacing: 1px;
   transition: background-color 0.25s, color 0.25s;
 }
@@ -89,5 +89,116 @@ button {
 
 //i is for icons
 i {
-  font-size: $font-md;
+  font-size: $font-size-md;
+}
+
+//Theme Color
+
+body.dark-theme {
+  $dark-color: $xanadu;
+  $dark-color-alt: $mountbatten-pink;
+  $primary-background: $cadet-grey;
+  $secondary-background: $light-periwinkle;
+  $hover-dark-color: #fff;
+  $transparent-dark-color: $secondary-background;
+  $transparent-light-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Reusable classes */
+.container {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.place-items-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section:not(.featured-articles) {
+  padding-block: 5rem;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.screen-sm-hidden {
+  display: none;
+}
+
+/* Header */
+.header {
+  background-color: $secondary-background-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+}
+
+.logo {
+  font-size: $font-size-md;
+  color: $light-color;
+}
+
+.menu {
+  position: absolute;
+  top: 8.5rem;
+  right: 1.5rem;
+  width: 23rem;
+  padding: 1.5rem;
+  background-color: $secondary-background-color;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.25s ease-in;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+.menu > .list {
+  flex-direction: column;
+}
+
+.list-link.current {
+  color: $light-color;
+}
+
+.close-menu-icon {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.list-link:hover,
+.btn:hover,
+.btn:hover span {
+  color: $light-color;
+}
+
+.moon-icon {
+  display: none;
+}
+
+.light-theme .sun-icon {
+  display: none;
+}
+
+.light-theme .moon-icon {
+  display: block;
 }
