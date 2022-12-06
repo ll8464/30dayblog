@@ -20,7 +20,7 @@ $light-alt: $light-periwinkle;
 $primary-background-color: $medium-champagne;
 $secondary-background-color: $atomic-tangerine;
 $hover-light: $light-color;
-$hover-dark: $primary-background-color;
+$hover-dark: $atomic-tangerine;
 $gradient-color: linear-gradient(
   90deg,
   #fbe8a6ff,
@@ -201,4 +201,23 @@ body.dark-theme {
 
 .light-theme .moon-icon {
   display: block;
+}
+
+// theme hover
+.topic:hover {
+  background-color: $hover-light;
+  color: $hover-dark;
+}
+
+.topics-articles {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+  font-size: $font-size-xsm;
+  margin-bottom: 1rem;
+}
+
+.topic {
+  color: $dark-color;
+  font-size: $font-size-md;
 }
