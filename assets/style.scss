@@ -17,7 +17,7 @@ $textColor: black;
 /*Variables*/
 $light-color: #fff;
 $light-alt: $light-periwinkle;
-$primary-background-color: $medium-champagne;
+$primary-background-color: $light-color;
 $secondary-background-color: $atomic-tangerine;
 $hover-light: $light-color;
 $hover-dark: $atomic-tangerine;
@@ -55,10 +55,7 @@ body {
   font-size: $font-size-sm;
   letter-spacing: 1px;
   transition: background-color 0.25s, color 0.25s;
-}
-
-header {
-  background-color: $medium-champagne;
+  background-color: $primary-background-color;
 }
 
 // Sets the scalable font size for rem (equilivent to 10px), even when using zoom.
@@ -79,6 +76,15 @@ img {
   max-width: 100%;
 }
 
+.header {
+  background-color: $medium-champagne;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 input,
 button {
   font: inherit;
@@ -95,16 +101,36 @@ i {
 //Theme Color
 
 body.dark-theme {
-  $dark-color: $xanadu;
+  $textColor: $xanadu;
   $dark-color-alt: $mountbatten-pink;
-  $primary-background: $cadet-grey;
+  $primary-background-color: $cadet-grey;
   $secondary-background: $light-periwinkle;
   $hover-dark-color: #fff;
   $transparent-dark-color: $secondary-background;
   $transparent-light-color: rgba(0, 0, 0, 0.1);
+  background-color: $primary-background-color;
+  $secondary-background-color: $light-periwinkle;
+}
+body.dark-theme header {
+  $secondary-background-color: $light-periwinkle;
+  background-color: $outer-space-crayola;
+}
+
+body.dark-theme > section > .banner {
+  display: none;
+}
+
+body.dark-theme > header > nav {
+  color: $light-color;
+}
+
+body.dark-theme > header > nav > div.menu {
+  color: $light-color;
+  background-color: $outer-space-crayola;
 }
 
 /* Reusable classes */
+//The container class limits how far an element can stretch to
 .container {
   max-width: 160rem;
   margin: 0 auto;
@@ -163,6 +189,23 @@ body.dark-theme {
   transition: opacity 0.25s ease-in;
 }
 
+.header.activated {
+  box-shadow: 0 1px 0.5rem $transparent-light;
+}
+
+.menu.activated {
+  box-shadow: 1px 1px 1rem $transparent-light;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.menu-toggle-icon.activated .open-menu-icon {
+  display: none;
+}
+.menu-toggle-icon.activated .close-menu-icon {
+  display: block;
+}
+
 .list {
   display: flex;
   align-items: center;
@@ -186,8 +229,7 @@ body.dark-theme {
 }
 
 .list-link:hover,
-.btn:hover,
-.btn:hover span {
+.btn:hover {
   color: $light-color;
 }
 
@@ -195,18 +237,18 @@ body.dark-theme {
   display: none;
 }
 
-.light-theme .sun-icon {
+.dark-theme .sun-icon {
   display: none;
 }
 
-.light-theme .moon-icon {
+.dark-theme .moon-icon {
   display: block;
 }
 
 // theme hover
 .topic:hover {
   background-color: $hover-light;
-  color: $hover-light;
+  color: $hover-dark;
 }
 
 .introduction,
@@ -227,7 +269,7 @@ body.dark-theme {
 }
 
 .topic {
-  color: $atomic-tangerine;
+  color: black;
   font-size: $font-size-md;
 }
 .post {

@@ -13,10 +13,7 @@ body {
   font-size: 1.6rem;
   letter-spacing: 1px;
   transition: background-color 0.25s, color 0.25s;
-}
-
-header {
-  background-color: rgb(251, 232, 166);
+  background-color: #fff;
 }
 
 html {
@@ -36,6 +33,15 @@ img {
   max-width: 100%;
 }
 
+.header {
+  background-color: rgb(251, 232, 166);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 input,
 button {
   font: inherit;
@@ -46,6 +52,27 @@ button {
 
 i {
   font-size: 2.4rem;
+}
+
+body.dark-theme {
+  background-color: rgb(160, 170, 178);
+}
+
+body.dark-theme header {
+  background-color: rgb(46, 53, 50);
+}
+
+body.dark-theme > section > .banner {
+  display: none;
+}
+
+body.dark-theme > header > nav {
+  color: #fff;
+}
+
+body.dark-theme > header > nav > div.menu {
+  color: #fff;
+  background-color: rgb(46, 53, 50);
 }
 
 /* Reusable classes */
@@ -107,6 +134,24 @@ i {
   transition: opacity 0.25s ease-in;
 }
 
+.header.activated {
+  box-shadow: 0 1px 0.5rem rbga(255, 255, 255, 0.05);
+}
+
+.menu.activated {
+  box-shadow: 1px 1px 1rem rbga(255, 255, 255, 0.05);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.menu-toggle-icon.activated .open-menu-icon {
+  display: none;
+}
+
+.menu-toggle-icon.activated .close-menu-icon {
+  display: block;
+}
+
 .list {
   display: flex;
   align-items: center;
@@ -130,8 +175,7 @@ i {
 }
 
 .list-link:hover,
-.btn:hover,
-.btn:hover span {
+.btn:hover {
   color: #fff;
 }
 
@@ -139,17 +183,17 @@ i {
   display: none;
 }
 
-.light-theme .sun-icon {
+.dark-theme .sun-icon {
   display: none;
 }
 
-.light-theme .moon-icon {
+.dark-theme .moon-icon {
   display: block;
 }
 
 .topic:hover {
   background-color: #fff;
-  color: #fff;
+  color: rgb(244, 151, 108);
 }
 
 .introduction,
@@ -168,7 +212,7 @@ i {
 }
 
 .topic {
-  color: rgb(244, 151, 108);
+  color: black;
   font-size: 2.4rem;
 }
 
