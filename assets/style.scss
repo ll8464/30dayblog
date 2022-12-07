@@ -206,18 +206,30 @@ body.dark-theme {
 // theme hover
 .topic:hover {
   background-color: $hover-light;
-  color: $hover-dark;
+  color: $hover-light;
+}
+
+.introduction,
+.banner {
+  align-items: center;
+  gap: $gap;
+  font-size: $font-size-sm;
+  margin-bottom: 1rem;
 }
 
 .topics-articles {
-  display: flex;
+  //display: flex;
   align-items: center;
   gap: $gap;
   font-size: $font-size-xsm;
   margin-bottom: 1rem;
+  //flex-direction: column;
 }
 
 .topic {
-  color: $dark-color;
+  color: $atomic-tangerine;
   font-size: $font-size-md;
+}
+.post {
+  padding-bottom: 2rem;
 }

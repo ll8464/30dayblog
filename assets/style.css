@@ -149,13 +149,29 @@ i {
 
 .topic:hover {
   background-color: #fff;
-  color: rgb(244, 151, 108);
+  color: #fff;
+}
+
+.introduction,
+.banner {
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 .topics-articles {
-  display: flex;
   align-items: center;
   gap: 2rem;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+
+.topic {
+  color: rgb(244, 151, 108);
+  font-size: 2.4rem;
+}
+
+.post {
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=style.css.map */
